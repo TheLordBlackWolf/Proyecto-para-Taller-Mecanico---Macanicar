@@ -83,8 +83,7 @@ if ($_POST['btn_enviar'] == 'registrar') {
   $Direccion = $_POST['direccion'];
   $Celular = $_POST['celular'];
 
-  $sql = "INSERT INTO Usuario
-	     	 VALUES($Nombre,$Apellido,$Rut,$Correo,$Clave,$Direccion,$Celular)";
+  $sql = "INSERT INTO Usuario VALUES($Nombre,$Apellido,$Rut,$Correo,$Clave,$Direccion,$Celular)";
 	     	mysqli_query($cnn, $sql);
 	     	echo "<script> alert('Se han grabado los datos') </script>";
  }

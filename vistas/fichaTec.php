@@ -1,179 +1,84 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+<!Doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
 
-    <title>Ficha Tecnica</title>
+    <title>Registre una nueva ficha tecnica </title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style-fichatec.css" />
-    <link rel="stylesheet" href="css/style-redes.css">
+    <link rel="stylesheet" href="../css/parche-fichatec.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+<link href="../src/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
 
   </head>
-  <body style="background-image: url(img/contact/back-fondo.jpeg); background-repeat: no-repeat; background-size: cover;">
 
-    <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo1.jpg" width="160" height="80" class="d-inline-block align-top" alt="">
-        <strong style="font-family: serif; font-size: 40px; color: black; list-style: none; text-align: center;"><a href="index.php">MECANICAR</a></strong>
-      </a>
+<body class="text-center">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-family: Vegur, Georgia, "Times New Roman", sans-serif;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" style="font-size: 20px; font-family: serif;" href="index.php">HOME <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size: 20px; font-family: serif;" href="servicios.php">SERVICIOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size: 20px; font-family: serif;" href="contacto.php">CONTACTENOS</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-    </nav>
+  <form method="POST" action="" class="form-signin">
+  		<?php error_reporting(0); ?>
 
-    <header id="reg-header">
-      <div style="height: 595px;" id="frm-loginReg">
-        <form method="" action="">
-              <form method="post">
-          <?php error_reporting(0); ?>
-          <br>
-          <br>
-              <center class="titulo" style="font-size: 50px; font-family: serif;"><b>Ficha Tecnica Vehiculo</b></center>
-              <center>
-          <br>
-          <br>
-              <table border="0" class="texto2">
-                  <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Rut:</td>
-                      <td><input type="text" name="txtRut" value=""></td>
-                  </tr>
-                  <tr>
-                      <td>Fono:</td>
-                      <td><input type="text" name="txtFon" value=""></td>
-                  </tr>
+    <img class="mb-4" src="../img/mecanico/plantilla-2.png" alt="" width="120" height="110">
+    <img class="mb-4" src="../img/mecanico/llave-inglesa.png" alt="" width="120" height="110">
 
-                  <tr>
-                      <td>Patente:</td>
-                      <td><input type="text" name="txtPatent" value=""></td>
-                  </tr>
-                  <tr>
-                      <td>Marca:</td>
-                      <td>
-                          <select name="txtMarca">
-                              <option value=""></option>
-                              <option value="Audi">Audi</option>
-                              <option value="BMW">BMW</option>
-                              <option value="Chery">Chery</option>
-                              <option value="Chevrolet">Chevrolet</option>
-                              <option value="Ford">Ford</option>
-                              <option value="Dodge">Dodge</option>
-                              <option value="Fiat">Fiat</option>
-                              <option value="Honda">Honda</option>
-                          </select>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>Modelo :</td>
-                      <td><input type="text" name="txtModel" value=""></td>
-                  </tr>
-                  <tr>
-                      <td>Año :</td>
-                      <td><input type="date" name="txtan" value="" ></td>
-                  </tr>
-                  <tr>
-                      <td>Combustible:</td>
-                      <td>
-                          <select name="txtCon">
-                              <option value="">       </option>
-                              <option value="Eléctrico">Combustible flexible</option>
-                              <option value="Eléctrico híbrido">Eléctrico híbrido</option>
-                              <option value="Hidrógeno">Hidrógeno</option>
-                              <option value="Eléctrico">Eléctrico</option>
-                              <option value="Eléctrico híbrido">Gas natural vehicular</option>
-                              <option value="Eléctrico">Gas licuado del petróleo</option>
-                          </select>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                  </tr>
-              </table>
+    <h1 class="h3 mb-3 font-weight-normal">Agregue otro auto y<br>Ficha tecnica </h1>
 
-              <div class="caja" >
-                    <button type="button" class="btn btn-primary" onclick="location.href='http://localhost:8888/SistMecanicar/src/php/index.php'">Salir</button>
-                    <button type="button" class="btn btn-primary" onclick="location.href='http://localhost:8888/SistMecanicar/src/php/ordenTrabajo.php'">Siguiente</button>
-                    </div>
-        </div>
-      </form>
-  </header>
+    <label for="" class="sr-only">Fecha Ingreso</label>
+    <input type="text" name="fechaIngreso" id="" class="form-control" placeholder="Ingreso del vehiculo" required autofocus>
+    <br>
+    <label for="inputApellido" class="sr-only">Patente</label>
+    <input type="text" name="patente" id=""  class="form-control" placeholder="Patente de su vehiculo" required>
+    <br>
+    <label for="inputRut" class="sr-only">Marca</label>
+    <input type="text" name="marca" id="" class="form-control" placeholder="Marca de su vehiculo" required>
+    <br>
+    <label for="inputCorreo" class="sr-only">Modelo</label>
+    <input type="text" name="modelo" id="" class="form-control" placeholder="Modelo de su vehiculo" required>
+    <br>
+    <label for="inputClave" class="sr-only">Año</label>
+    <input type="text" name="año" id="" class="form-control" placeholder="Año de su vehiculor" required>
+    <br>
+    <label for="inputClave" class="sr-only">Color</label>
+    <input type="text" name="color" id="" class="form-control" placeholder="Color de su vehiculo" required>
+    <br>
+    <label for="inputDireccion" class="sr-only">Tipo de combustible</label>
+    <input type="text" name="tipoCombustible" id="" class="form-control" placeholder="Tipo de combustible que usa" required>
+    <br>
+    <label for="inputCelular" class="sr-only">Compañia de Seguro</label>
+    <input type="text" name="compaSeguro" id="" class="form-control" placeholder="Compañia de Seguro vehicular" required>
+    <br>
+    <label for="inputClave" class="sr-only">Kilometraje</label>
+    <input type="text" name="kilometraje" id="" class="form-control" placeholder="Kilometraje actual" required>
+    <br>
+    <button type="submit" name="btnAgregar" value="agregarFicha" class="btn btn-lg btn-primary btn-block">Agregar ficha tecnica</button>
+    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="location.href='http://localhost:8888/Mecanicar/vistas/panelUser.php/'">Cancelar</button>
 
-  <div class="sticky-container">
-    <ul class="sticky">
-        <li>
-            <img src="img/icon-redes/facebook.png" width="32" height="32">
-            <p><a href="https://www.facebook.com/" target="_blank">Siguenos en<br>Facebook</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/twitter.png" width="32" height="32">
-            <p><a href="https://twitter.com/" target="_blank">Siguenos en<br>Twitter</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/gmail.png" width="32" height="32">
-            <p><a href="https://plus.google.com/" target="_blank">Escribenos a<br>Gmail</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/in-prueba.png" width="32" height="32">
-            <p><a href="https://www.linkedin.com/" target="_blank">Siguenos en<br>LinkedIn</a></p>
-        </li>
-    </ul>
-</div>
-  </div>
-</form>
+    <p class="mt-5 mb-3 text-muted" style="color: white;">&copy; Taller mecanico - Mecanicar 2020</p>
+  </form>
 
-<footer style="margin-top: 60px;">
-<!-- Este será nuestro pie de página -->
-<p>Todos los derechos reservados 2020, Empresa Taller Mecanico <strong style="color: white;"><a href="#">Mecanicar.</a></strong></p>
-</footer>
+  <script src="../Js/scriptValidacion.js" type="text/javascript" ></script>
   </body>
+  </html>
+
+
+</body>
 </html>

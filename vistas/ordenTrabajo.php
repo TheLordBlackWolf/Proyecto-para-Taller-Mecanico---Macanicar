@@ -85,35 +85,7 @@
       </form>
     </div>
   </header>
-
-  <div class="sticky-container">
-    <ul class="sticky">
-        <li>
-            <img src="img/icon-redes/facebook.png" width="32" height="32">
-            <p><a href="https://www.facebook.com/" target="_blank">Siguenos en<br>Facebook</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/twitter.png" width="32" height="32">
-            <p><a href="https://twitter.com/" target="_blank">Siguenos en<br>Twitter</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/gmail.png" width="32" height="32">
-            <p><a href="https://plus.google.com/" target="_blank">Escribenos a<br>Gmail</a></p>
-        </li>
-        <li>
-            <img src="img/icon-redes/in-prueba.png" width="32" height="32">
-            <p><a href="https://www.linkedin.com/" target="_blank">Siguenos en<br>LinkedIn</a></p>
-        </li>
-    </ul>
-</div>
   </div>
 </form>
-
-<footer style="margin-top: 480px;">
-<!-- Este será nuestro pie de página -->
-<p>Todos los derechos reservados 2020, Empresa Taller Mecanico <strong style="color: white;"><a href="#">Mecanicar.</a></strong></p>
-</footer>
-
-
-  </body>
+</body>
 </html>
