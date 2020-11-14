@@ -50,7 +50,7 @@
   <input type="text" name="rut" id="" class="form-control" placeholder="Su Rut por favor" required>
 
   <label for="inputCorreo" class="sr-only">Correo</label>
-  <input type="text" name="correo" id="" class="form-control" placeholder="Su Correo por favor" required>
+  <input type="email" name="email" id="" class="form-control" placeholder="Su Correo por favor" required>
 
   <label for="inputClave" class="sr-only">Clave</label>
   <input type="password" name="clave" id="" class="form-control" placeholder="Su Clave por favor" required>
@@ -68,26 +68,12 @@
   <p class="mt-5 mb-3 text-muted" style="color: white;">&copy; Taller mecanico - Mecanicar 2020</p>
 </form>
 
-<script src="../Js/scriptValidacion.js" type="text/javascript" ></script>
 <?php
-include("../funciones/funcion-conect.php");
+include('../funciones/funcion-conect.php');
+include('../funciones/AgregarUser.php');
+ ?>
 
-if ($_POST['btn_enviar'] == 'registrar') {
 
-  $cnn = con();
-  $Nombre = $_POST['nombre'];
-  $Apellido = $_POST['apellido'];
-  $Rut = $_POST['rut'];
-  $Correo = $_POST['correo'];
-  $Clave = $_POST['clave'];
-  $Direccion = $_POST['direccion'];
-  $Celular = $_POST['celular'];
-
-  $sql = "INSERT INTO Usuario VALUES($Nombre,$Apellido,$Rut,$Correo,$Clave,$Direccion,$Celular)";
-	     	mysqli_query($cnn, $sql);
-	     	echo "<script> alert('Se han grabado los datos') </script>";
- }
-
-?>
+<script src="../Js/scriptValidacion.js" type="text/javascript" ></script>
 </body>
 </html>

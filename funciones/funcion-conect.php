@@ -1,14 +1,5 @@
 <?php
-function con()
-{
-	if (!($cnn = mysqli_connect("LocalHost","root","root"))){
-	 exit();
-    }
-    if (! mysqli_select_db($cnn,"DB_TallerMecanico"))
-    {
-    	exit();
-    }
-    return $cnn;
-}
+
+$conexion = mysqli_connect("localhost", "root", "root", "DB_TallerMecanico");
 
 ?>
