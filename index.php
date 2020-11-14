@@ -1,4 +1,6 @@
-
+<?php
+include("./funciones/validarRut.php");
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,20 +43,20 @@
   <img class="mb-4" src="img/avatar/hombreMasca.png" alt="" width="140" height="120">
   <img class="mb-4" src="img/avatar/mujerMasca.png" alt="" width="140" height="120">
 
-  <h1 class="h3 mb-3 font-weight-normal">Por favor, Ingrese sus datos</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Inicio de Sesion</h1>
   <br>
   <label for="inputEmail" class="sr-only">Rut</label>
-  <input type="rut" name="rut" id="inputRut" class="form-control" placeholder="Su rut por favor" required autofocus>
+  <input type="text" name="rut" id="inputRut" class="form-control" placeholder="Su rut por favor" required autofocus>
   <br>
   <label for="inputPassword" class="sr-only">Contraseña</label>
-  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Su clave por favor" required>
+  <input type="password" name="clave" id="inputPassword" class="form-control" placeholder="Su clave por favor" required>
 
   <div class="checkbox mb-3">
     <label style="color:white; font-size: 20px;">
       <input type="checkbox" value="remember-me"> Recordar usuario
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesion</button>
+  <button type="submit" name="btnEntrar" value="acceder" class="btn btn-lg btn-primary btn-block">Iniciar Sesion</button>
   <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="location.href='http://localhost:8888/Mecanicar/vistas/SingUp.php'">Registrese aqui</button>
   <br>
   <span style="color: white; font-size: 20px; list-style: none;">

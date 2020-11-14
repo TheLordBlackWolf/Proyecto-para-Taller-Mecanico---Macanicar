@@ -1,4 +1,3 @@
-
 <!Doctype html>
 <html lang="en">
   <head>
@@ -55,13 +54,19 @@
   <label for="inputClave" class="sr-only">Clave</label>
   <input type="password" name="clave" id="" class="form-control" placeholder="Su Clave por favor" required>
 
-  <label for="inputDireccion" class="sr-only">Direccion</label>
+  <label for="inputDireccion" class="sr-only" style="color: white;">Direccion</label>
   <input type="text" name="direccion" id="" class="form-control" placeholder="Su Direccion por favor" required>
 
   <label for="inputCelular" class="sr-only">Celular</label>
   <input type="text" name="celular" id="" class="form-control" placeholder="Su Celular por favor" required>
   <br>
 
+  <select class="" name="cargo" style="width: 300px; height: 250px;">
+    <option value="">Seleccione una opcion</option>
+    <option value="cliente" style="height: 100px;">Cliente</option>
+    <option value="empleado">Empleado</option>
+  </select>
+  <br><br>
   <button type="submit" name="btn_enviar" value="registrar" class="btn btn-lg btn-primary btn-block">Registrar Usuario</button>
   <button class="btn btn-lg btn-primary btn-block" type="" onclick="location.href='http://localhost:8888/Mecanicar/'">Iniciar Sesion</button>
 

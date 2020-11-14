@@ -10,16 +10,17 @@ include("./funcion-conect.php");
   $Clave = $_POST['clave'];
   $Direccion = $_POST['direccion'];
   $Celular = $_POST['celular'];
+  $Cargo = $_POST['cargo'];
 
 
-        $sql = "INSERT INTO Usuario(Nombre, Apellido, Rut, Correo, Clave, Direccion, Celular)
-         VALUES ('$Nombre','$Apellido','$Rut','$Correo ','$Clave','$Direccion ','$Celular')";
+        $sql = "INSERT INTO Usuario(Nombre, Apellido, Rut, Correo, Clave, Direccion, Celular, Cargo)
+         VALUES ('$Nombre','$Apellido','$Rut','$Correo ','$Clave','$Direccion ','$Celular', '$Cargo')";
 	     	$resultado = mysqli_query($conexion, $sql);
 	     	if ($resultado) {
            ?>
            echo "<script> alert('Se han grabado los datos') </script>";
            <?php
-         } 
+         }
  }
 
 ?>
