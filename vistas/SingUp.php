@@ -70,8 +70,7 @@
 
 <script src="../Js/scriptValidacion.js" type="text/javascript" ></script>
 <?php
-include ('../funciones/funcion-conectar.php');
-include ('conectar.php');
+include("../funciones/funcion-conect.php");
 
 if ($_POST['btn_enviar'] == 'registrar') {
 
