@@ -10,9 +10,6 @@ CREATE TABLE IF NOT EXISTS Usuario(
     Clave VARCHAR(30) NOT NULL,
     Direccion VARCHAR(300),
     Celular INT(11),
-    Propietario VARCHAR(255),
-    CREATED_AT DATETIME,
-    UPDATE_AT DATETIME,
     PRIMARY KEY(Id_Us)
 )ENGINE=INNODB;
 
@@ -28,8 +25,6 @@ CREATE TABLE IF NOT EXISTS JefeTaller(
     Direccion VARCHAR(300),
     Celular INT(11),
     Cargo VARCHAR(255),
-    CREATED_AT DATETIME,
-    UPDATE_AT DATETIME,
     PRIMARY KEY(Id_Jt)
 )ENGINE=INNODB;
 
@@ -47,8 +42,6 @@ CREATE TABLE IF NOT EXISTS FichaTec(
     Color VARCHAR(255),
     Kilometraje INT(100),
     NivelCombustible VARCHAR(100),
-    CREATED_AT DATETIME,
-    UPDATE_AT DATETIME,
     IdUser INT(255),
     FOREIGN KEY(IdUser) REFERENCES Usuario(Id_Us),
     PRIMARY KEY(Id_Ft)
@@ -59,7 +52,7 @@ CREATE TABLE IF NOT EXISTS OrdenTrabajo(
 	Id_Ot INT(255) AUTO_INCREMENT,
     NumOrden INT(100),
     Nombre_Sucursal VARCHAR(255),
-    Estado VARCHAR(200),
+    EstadoVehiculo VARCHAR(200),
     Detalles VARCHAR(600),
     Detalles_repuestos VARCHAR(255),
     IdUser INT(255),
@@ -69,6 +62,7 @@ CREATE TABLE IF NOT EXISTS OrdenTrabajo(
     PRIMARY KEY(Id_Ot)
 )ENGINE=INNODB;
 
+
 CREATE TABLE IF NOT EXISTS Proveedor(
 	Id_P INT(255) AUTO_INCREMENT,
     nombre_Proveedor CHAR(255),
@@ -77,7 +71,9 @@ CREATE TABLE IF NOT EXISTS Proveedor(
     Telefono INT(15),
     Correo VARCHAR(255),
     Direccion VARCHAR(255),
-    PRIMARY KEY(Id_P)
+    Id_Sucursal INT AUTO_INCREMENT,
+    PRIMARY KEY(Id_P),
+    CONSTRAINT FOREIGN KEY(Id_Sucursal) REFERENCES Sucursal(Id_S)
 )ENGINE=INNODB;
 
 CREATE TABLE IF NOT EXISTS Factura(
@@ -87,11 +83,10 @@ CREATE TABLE IF NOT EXISTS Factura(
     ValorNeto INT(8),
     Iva 	  INT(8),
     ValorTotal INT(8),
-    Descripcion VARCHAR(600),
+    Descripcion_trabajo VARCHAR(600),
     IdUser INT(255),
     IdOrdenTrabajo INT(255),
     CONSTRAINT FOREIGN KEY(IdUser) REFERENCES Usuario(Id_Us),
     CONSTRAINT FOREIGN KEY(IdOrdenTrabajo) REFERENCES OrdenTrabajo(Id_Ot),
     PRIMARY KEY(Id_F)
 )ENGINE=INNODB;
-
