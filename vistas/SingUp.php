@@ -61,10 +61,16 @@
   <input type="text" name="celular" id="" class="form-control" placeholder="Su Celular por favor" required>
   <br>
 
-  <select class="" name="cargo" style="width: 300px; height: 250px;">
+  <select class="" name="tipoUsuario" style="width: 300px; height: 250px;">
     <option value="">Seleccione una opcion</option>
     <option value="cliente" style="height: 100px;">Cliente</option>
     <option value="empleado">Empleado</option>
+  </select>
+  <br><br>
+  <select class="" name="cargo" style="width: 300px; height: 250px;">
+    <option value="">Seleccione una opcion</option>
+    <option value="cliente" style="height: 100px;">Jefe de taller</option>
+    <option value="empleado">Mecanico</option>
   </select>
   <br><br>
   <button type="submit" name="btn_enviar" value="registrar" class="btn btn-lg btn-primary btn-block">Registrar Usuario</button>

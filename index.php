@@ -1,7 +1,7 @@
 <?php
-include("./funciones/validarRut.php");
- ?>
-<!doctype html>
+session_start();
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -57,7 +57,7 @@ include("./funciones/validarRut.php");
     </label>
   </div>
   <button type="submit" name="btnEntrar" value="acceder" class="btn btn-lg btn-primary btn-block">Iniciar Sesion</button>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="location.href='http://localhost:8888/Mecanicar/vistas/SingUp.php'">Registrese aqui</button>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" onclick="location.href='http://localhost:8888/Mecanicar/vistas/SingUp.php'">Registrese aqui</button>
   <br>
   <span style="color: white; font-size: 20px; list-style: none;">
     <strong></strong>

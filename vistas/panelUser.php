@@ -1,5 +1,5 @@
 <?php
-
+include('../funciones/session.php');
 ?>
 
 <!Doctype html>

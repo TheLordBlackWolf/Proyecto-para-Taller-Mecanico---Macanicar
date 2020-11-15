@@ -3,6 +3,7 @@
 if($_POST["btn_enviar"]=="registrar"){
 include("./funcion-conect.php");
 
+  $cnn = Conectar();
   $Nombre = $_POST['nombre'];
   $Apellido = $_POST['apellido'];
   $Rut = $_POST['rut'];
@@ -15,7 +16,7 @@ include("./funcion-conect.php");
 
         $sql = "INSERT INTO Usuario(Nombre, Apellido, Rut, Correo, Clave, Direccion, Celular, Cargo)
          VALUES ('$Nombre','$Apellido','$Rut','$Correo ','$Clave','$Direccion ','$Celular', '$Cargo')";
-	     	$resultado = mysqli_query($conexion, $sql);
+	     	$resultado = mysqli_query($cnn, $sql);
 	     	if ($resultado) {
            ?>
            echo "<script> alert('Se han grabado los datos') </script>";
