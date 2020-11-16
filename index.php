@@ -54,6 +54,11 @@ include("./funciones/funcion-conect.php");
   <br>
   <label for="inputPassword" class="sr-only">Contraseña</label>
   <input type="password" name="clave" id="inputPassword" class="form-control" placeholder="Su clave por favor" required>
+  <br>
+  <select class="" name="TipoUsuario" style="width: 300px; height: 250px;">
+    <option value="cliente">Cliente</option>
+    <option value="jefeTaller">Jefe de taller</option>
+  </select>
 
   <div class="checkbox mb-3">
     <label style="color:white; font-size: 20px;">
@@ -72,7 +77,7 @@ include("./funciones/funcion-conect.php");
   <p class="mt-5 mb-3 text-muted">&copy; Taller mecanico - Mecanicar 2020</p>
 </form>
 <?php
-  include("./funciones/validacionUser.php");
+
  ?>
 </body>
 </html>

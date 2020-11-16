@@ -6,7 +6,7 @@ if($_POST['btnEntrar']=="acceder"){
     $rut = $_POST['rut'];
     $clave = $_POST['clave'];
 
-    $sql = "SELECT * from usuarios where Rut ='$rut' and Clave ='$clave'";
+    $sql = "SELECT Rut, Clave from usuarios where Rut ='$rut' and Clave ='$clave'";
     $rs = mysqli_query($cnn,$sql);
         if(mysqli_num_rows($rs) != 0 ){
             if($row = mysqli_fetch_array($rs)){
