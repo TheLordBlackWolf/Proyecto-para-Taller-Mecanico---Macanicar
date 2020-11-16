@@ -25,6 +25,8 @@
 <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
 
@@ -49,7 +51,7 @@
   <input type="text" name="rut" id="" class="form-control" placeholder="Su Rut por favor" required>
 
   <label for="inputCorreo" class="sr-only">Correo</label>
-  <input type="email" name="email" id="" class="form-control" placeholder="Su Correo por favor" required>
+  <input type="text" name="email" id="" class="form-control" placeholder="Su Correo por favor" required>
 
   <label for="inputClave" class="sr-only">Clave</label>
   <input type="password" name="clave" id="" class="form-control" placeholder="Su Clave por favor" required>
@@ -61,14 +63,14 @@
   <input type="text" name="celular" id="" class="form-control" placeholder="Su Celular por favor" required>
   <br>
 
-  <select class="" name="tipoUsuario" style="width: 300px; height: 250px;">
-    <option value="">Seleccione una opcion</option>
+  <select id="primary" class="" name="TipoUsuario" style="width: 300px; height: 250px;">
+    <option value="">Seleccione tipo de usuario</option>
     <option value="cliente" style="height: 100px;">Cliente</option>
     <option value="empleado">Empleado</option>
   </select>
   <br><br>
-  <select class="" name="cargo" style="width: 300px; height: 250px;">
-    <option value="">Seleccione una opcion</option>
+  <select id="secondary" name="CargoEmpleado" style="width: 300px; height: 250px;">
+    <option value="">Seleccione su Cargo</option>
     <option value="cliente" style="height: 100px;">Jefe de taller</option>
     <option value="empleado">Mecanico</option>
   </select>
@@ -83,8 +85,8 @@
 include('../funciones/funcion-conect.php');
 include('../funciones/AgregarUser.php');
  ?>
+<script type="text/javascript" src="../Js/comboBox.js">
+</script>
 
-
-<script src="../Js/scriptValidacion.js" type="text/javascript" ></script>
 </body>
 </html>

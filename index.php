@@ -67,5 +67,8 @@ session_start();
   </span>
   <p class="mt-5 mb-3 text-muted">&copy; Taller mecanico - Mecanicar 2020</p>
 </form>
+<?php include("./funciones/funcion-conect.php");
+      include("./funciones/validacionUser.php");
+ ?>
 </body>
 </html>

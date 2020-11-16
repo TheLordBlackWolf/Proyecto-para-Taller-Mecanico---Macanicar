@@ -1,5 +1,11 @@
 <?php
-include('../funciones/session.php');
+session_start();
+    if( isset($_SESSION['datoTip'])){
+        echo "El usuario conectado es: ".$_SESSION['datoNom'];
+    }else{
+        session_destroy();
+        header("Location: index.php");
+    }
 ?>
 
 <!Doctype html>
@@ -35,7 +41,29 @@ include('../funciones/session.php');
   </head>
 
 <body class="text-center">
+  <form method="post">
+<br><br><br><br><br>
+<h1><b><center>
+    MENU DEL Usuario
+    <?php
+    error_reporting(0);
+    ?>
+    <br><br> MI PERFIL <br>
+<input type="text" name="txtRut" value="<?php echo $_SESSION['datoRut'];?>">
+<input type="text" name="txtCar" value="<?php echo $_SESSION['datoTip'];?>">
 
+<br><br><br><br><br><br>
+<input type="submit" name="btnSalir" value="Cerrar Sesion">
+
+<?php
+if($_POST['btnSalir']=="Cerrar Sesion"){
+    session_destroy();
+    header("Location: index.php");
+
+
+}
+?>
+</form>
 
 </body>
 </html>
