@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include("./funciones/funcion-conect.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +12,8 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
+    <meta name="theme-color" content="#563d7c">
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
     <title>Bienvenidos Usuarios</title>
 
     <link rel="stylesheet" href="css/main.css">
@@ -19,20 +24,19 @@ session_start();
 <link href="../src/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
-
-    <!-- Custom styles for this template -->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
     <link href="signin.css" rel="stylesheet">
-  </head>
 
-  <body class="text-center">
+    <script type="text/javascript" src="Js/ReloadPage.js"></script>
+
+</head>
+
+<body class="text-center">
 
 <form action="" class="form-signin" method="POST">
   <?php
@@ -67,8 +71,8 @@ session_start();
   </span>
   <p class="mt-5 mb-3 text-muted">&copy; Taller mecanico - Mecanicar 2020</p>
 </form>
-<?php include("./funciones/funcion-conect.php");
-      include("./funciones/validacionUser.php");
+<?php
+  include("./funciones/validacionUser.php");
  ?>
 </body>
 </html>

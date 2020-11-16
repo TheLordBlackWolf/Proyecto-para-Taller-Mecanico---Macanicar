@@ -4,19 +4,17 @@ session_start();
         echo "El usuario conectado es: ".$_SESSION['datoNom'];
     }else{
         session_destroy();
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 ?>
-
 <!Doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Cree su ficha tecnica </title>
+    <title>Panel de usuario </title>
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
@@ -41,16 +39,16 @@ session_start();
   </head>
 
 <body class="text-center">
-  <form method="post">
-<br><br><br><br><br>
-<h1><b><center>
-    MENU DEL Usuario
+  <form method="POST" action="">
+
+<h1><center>MENU DEL Usuario</center></h1>
     <?php
     error_reporting(0);
     ?>
-    <br><br> MI PERFIL <br>
-<input type="text" name="txtRut" value="<?php echo $_SESSION['datoRut'];?>">
-<input type="text" name="txtCar" value="<?php echo $_SESSION['datoTip'];?>">
+   <h1>Mi perfil </h1>
+
+<input type="text" name="rut" value="<?php echo $_SESSION['datoRut'];?>">
+<input type="text" name="tipoUsuario" value="<?php echo $_SESSION['datoTip'];?>">
 
 <br><br><br><br><br><br>
 <input type="submit" name="btnSalir" value="Cerrar Sesion">
@@ -59,8 +57,6 @@ session_start();
 if($_POST['btnSalir']=="Cerrar Sesion"){
     session_destroy();
     header("Location: index.php");
-
-
 }
 ?>
 </form>

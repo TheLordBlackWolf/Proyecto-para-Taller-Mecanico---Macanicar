@@ -12,10 +12,9 @@ include("./funcion-conect.php");
   $Direccion = $_POST['direccion'];
   $Celular = $_POST['celular'];
   $tipoUsuario = $_POST['TipoUsuario'];
-  $CargoEmple = $_POST['CargoEmpleado'];
 
-        $sql = "INSERT INTO Usuario(Nombre, Apellido, Rut, Correo, Clave, Direccion, Celular, TipoUsuario, CargoEmpleado )
-         VALUES ('$Nombre','$Apellido','$Rut','$Correo ','$Clave','$Direccion ','$Celular', '$tipoUsuario', '$CargoEmple')";
+        $sql = "INSERT INTO Usuario(Nombre, Apellido, Rut, Correo, Clave, Direccion, Celular, TipoUsuario )
+         VALUES ('$Nombre','$Apellido','$Rut','$Correo ','$Clave','$Direccion ','$Celular', '$tipoUsuario')";
 	     	$resultado = mysqli_query($cnn, $sql);
 	     	if ($resultado) {
            ?>

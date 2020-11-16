@@ -66,13 +66,7 @@
   <select id="primary" class="" name="TipoUsuario" style="width: 300px; height: 250px;">
     <option value="">Seleccione tipo de usuario</option>
     <option value="cliente" style="height: 100px;">Cliente</option>
-    <option value="empleado">Empleado</option>
-  </select>
-  <br><br>
-  <select id="secondary" name="CargoEmpleado" style="width: 300px; height: 250px;">
-    <option value="">Seleccione su Cargo</option>
-    <option value="cliente" style="height: 100px;">Jefe de taller</option>
-    <option value="empleado">Mecanico</option>
+    <option value="jefe">Jefe de taller</option>
   </select>
   <br><br>
   <button type="submit" name="btn_enviar" value="registrar" class="btn btn-lg btn-primary btn-block">Registrar Usuario</button>
