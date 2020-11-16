@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.17, for macos10.14 (x86_64)
 --
--- Host: 127.0.0.1    Database: Mecanicar
+-- Host: 127.0.0.1    Database: DB_TallerMecanico
 -- ------------------------------------------------------
 -- Server version	5.7.26
 
@@ -62,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-11 18:15:50
+-- Dump completed on 2020-11-16 19:00:02

@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS Usuario(
     Clave VARCHAR(30) NOT NULL,
     Direccion VARCHAR(300),
     Celular INT(11),
+    TipoUsuario VARCHAR(255),
     PRIMARY KEY(Id_Us)
 )ENGINE=INNODB;
 

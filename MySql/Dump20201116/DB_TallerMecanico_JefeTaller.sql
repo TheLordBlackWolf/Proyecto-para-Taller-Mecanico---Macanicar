@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.17, for macos10.14 (x86_64)
 --
--- Host: 127.0.0.1    Database: Mecanicar
+-- Host: 127.0.0.1    Database: DB_TallerMecanico
 -- ------------------------------------------------------
 -- Server version	5.7.26
 
@@ -16,31 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Proveedor`
+-- Table structure for table `JefeTaller`
 --
 
-DROP TABLE IF EXISTS `Proveedor`;
+DROP TABLE IF EXISTS `JefeTaller`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Proveedor` (
-  `Id_P` int(255) NOT NULL AUTO_INCREMENT,
-  `nombre_Proveedor` char(255) DEFAULT NULL,
-  `nombre_Empresa` varchar(12) DEFAULT NULL,
-  `rut_Empresa` varchar(255) DEFAULT NULL,
-  `Telefono` int(15) DEFAULT NULL,
-  `Correo` varchar(255) DEFAULT NULL,
-  `Direccion` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Id_P`)
+CREATE TABLE `JefeTaller` (
+  `Id_Jt` int(255) NOT NULL AUTO_INCREMENT,
+  `Nombre` char(255) DEFAULT NULL,
+  `Apellido` char(255) DEFAULT NULL,
+  `Rut` varchar(14) NOT NULL,
+  `Correo` varchar(255) NOT NULL,
+  `Clave` varchar(30) NOT NULL,
+  `ClaveUnica` varchar(8) NOT NULL,
+  `Direccion` varchar(300) DEFAULT NULL,
+  `Celular` int(11) DEFAULT NULL,
+  `Cargo` varchar(255) DEFAULT NULL,
+  `CREATED_AT` datetime DEFAULT NULL,
+  `UPDATE_AT` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id_Jt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Proveedor`
+-- Dumping data for table `JefeTaller`
 --
 
-LOCK TABLES `Proveedor` WRITE;
-/*!40000 ALTER TABLE `Proveedor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Proveedor` ENABLE KEYS */;
+LOCK TABLES `JefeTaller` WRITE;
+/*!40000 ALTER TABLE `JefeTaller` DISABLE KEYS */;
+/*!40000 ALTER TABLE `JefeTaller` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-11 18:15:50
+-- Dump completed on 2020-11-16 19:00:02
