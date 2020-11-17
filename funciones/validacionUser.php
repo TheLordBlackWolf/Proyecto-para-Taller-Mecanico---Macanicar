@@ -34,6 +34,4 @@ if($_POST['btnEntrar']=="acceder"){
             echo "<script>alert('Usuario o Clave incorrecta')</script>";
         }
 }
-
-
  ?>
